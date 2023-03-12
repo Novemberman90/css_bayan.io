@@ -1,0 +1,75 @@
+.body_page {
+    max-width: 500px;
+    margin: 30px auto;
+    border: red solid 1px;
+}
+
+.chord-item {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+
+.chord-title {
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: all 0.2s ease-in-out ;
+    position: relative;
+}
+
+.chord-title:after {
+   content: "";
+   display: block;
+   border-style: solid;
+   border-width: 8px 5px 0px 5px;
+   border-color: black transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+
+}
+
+.chord-title:hover {
+    background-color: red;
+
+}
+
+.chord-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+
+.chord-input:checked ~ .chord-title {
+    background-color: red;
+}
+
+.chord-input:checked ~ .chord-title::after {
+    border: solid;
+    border-width: 0px 5px 8px 5px;
+    border-color: transparent transparent black transparent;
+}
+
+.chord-input:checked ~ .chord-text {
+    display: block;
+}
+
+.chord-text {
+    display: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: red solid 1px;
+}
+
+@media (max-width:576px) {
+    .title {
+        margin-top: 10px;
+    }
+
+    .title h3 {
+        font-size: 17px;
+    }
+}
