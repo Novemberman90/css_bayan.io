@@ -1,7 +1,14 @@
 .body_page {
-    max-width: 500px;
+    max-width: 490px;
     margin: 30px auto;
     border: red solid 1px;
+    transition: all .2s ease-in-out;
+}
+
+.body_page:hover {
+    max-width: 500px;
+    height: auto;
+    box-shadow: black 0px 0px 5px 5px;
 }
 
 .chord-item {
@@ -9,6 +16,14 @@
     padding: 5px;
 }
 
+.chord-item:hover {
+    font-weight: 600;
+    color: white;
+}
+
+.img-item:hover{
+    box-shadow: blue 0px 0px 5px 5px;;
+}
 
 .chord-title {
     display: block;
@@ -52,6 +67,7 @@
     border-width: 0px 5px 8px 5px;
     border-color: transparent transparent black transparent;
 }
+
 
 .chord-input:checked ~ .chord-text {
     display: block;
