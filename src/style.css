@@ -1,3 +1,10 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 1vh 1vw;
+  }
+
+
 .body_page {
     max-width: 490px;
     margin: 30px auto;
@@ -11,101 +18,106 @@
     box-shadow:red 0px 0px 5px 5px;
 }
 
+input:checked + label .img-item {
+    max-height: 100vh;
+  }
+
 .chord-item {
     margin-bottom: 10px;
     padding: 5px;
 }
 
-.chord-item:hover {
-    font-weight: 600;
-    color: white;
-}
 
-.img-item:hover{
-    box-shadow: blue 0px 0px 5px 5px;
+.chord-input {
+    display: none;
+    width: 0;
+    height: 0;
+
 }
 
 .chord-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
     cursor: pointer;
     padding: 10px 15px;
     transition: all 0.2s ease-in-out ;
-    position: relative;
 }
 
 
 .chord-title:hover {
     background-color: red;
-
 }
 
-.chord-input {
-    width: 0;
-    height: 0;
-    appearance: none;
-    position: absolute;
-
+.chord-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
-
-i {
-    display: inline-block;
+ 
+ i {
+    
     font-size: 26px;
     font-weight: 900;
-    transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;   
 }
-.chord-title:hover i {
+
+ label:hover i {
+        transform: rotate(45deg);
+        color: white;
+      }
+
+/*.chord-title:hover i {
     transform: rotate(45deg);
-}
+    color: white;
+}*/
 
-.chord-input:checked ~ .chord-title {
-    background-color: red;
-}
-
-
-.chord-input:checked ~ i:focus {
-    transform: rotate(45deg);
-}
-
-.chord-input:checked + .chord-title i {
-    transform: rotate(45deg);
-}
-
-.chord-input:checked ~ .chord-text {
-    display: block;
-} 
-
-
-.chord-text {
-    display: none;
-    font-size: 16px;
-    padding: 10px 15px;
-    border: red solid 1px;
-}
-
-@media(hover:hover){
-    .img-item:active {
-        opacity: 0.3;
+ div h5:hover {
+        color: white;
+        text-align: center;
     }
-    label:hover img {
+
+.img-item {
+    display: block;
+    margin: 0 auto;
+    max-height: 0;
+    transition: max-height 2s, opacity 0.05s;
+    max-width: 60vw;
+}
+.img-item:hover{
+    box-shadow: blue 0px 0px 5px 5px;
+}
+
+
+@media (hover:hover) {
+    
+    label:hover .img-item {
         cursor: pointer;
       }
-      div .first:hover .chord-text{
+      div.first:hover .img-item {
         max-height: 100vh;
+        
       }
 
-      div .second:hover img{
-        max-height: 100vh;
+      div.second:hover .img-item {
+        max-height:  90vh;
       }
 
-      div .third:hover img{
-        max-height: 100vh;
+      div.third:hover img {
+        max-height:  90vh;
       }
 
-      div .fourth:hover img{
-        max-height: 100vh;
+      div.fourth:hover img{
+        max-height:  90vh;
       }
+
+      div.chord-item:hover {
+        cursor: pointer;
+
+      }
+      
+     
+
+     
+
 }
 
 @media (max-width:576px) {
